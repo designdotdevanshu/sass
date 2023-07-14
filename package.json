@@ -1,10 +1,11 @@
 {
+  "homepage": "https://designdotdevanshu.github.io/sass",
   "name": "sass",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "predeploy": "npm run build",
+    "predeploy": "sass src/sass/styles.scss dist/css/styles.css --style=compressed && npm run build",
     "deploy": "gh-pages -d docs",
     "dev": "vite --port 3000",
     "build": "vite build && mv dist docs",
